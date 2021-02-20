@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>level2</title>
+    <script>
+		function sort(arr){
+			for (i=0;i<arr.length-1;i++){
+				for (j=0;j<arr.length-i-1;j++){
+					if (arr[j]>arr[j+1]){
+						var temp=arr[j+1];
+						arr[j+1]=arr[j];
+						arr[j]=temp;
+					}
+				}
+			}
+			return arr
+		}
+		var re=sort([]);
+		console.log(re);
+    </script>
+    <!--1写一个函数对传入的数组进行冒泡排序-->
+</head>
+<body>
+    
+</body>
+</html>

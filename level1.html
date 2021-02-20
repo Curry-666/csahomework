@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>level1</title>
+    <script>
+        var arr = ['ABCDEEF,GHJKKM'];
+        function recur (arr) {
+        var obj = {};
+        for (var i = 0; i < arr.length; i++) {
+            if (obj[arr[i]] == undefined) {
+                obj[arr[i]] = 1;
+            } else {
+                obj[arr[i]]++;
+            }
+        }
+        for (var key in obj) {
+            obj[key] <= 1 && delete obj[key];
+        }
+        return Object.keys(obj);
+        }
+        console.log(recur(arr));
+    </script>
+    <!--1.写一个函数输出数组中重复的元素-->
+
+    <script>
+        function count(arr, n) {
+        var num = 0;
+        arr.forEach((elem)=>{
+        if(item === elem){
+            num++;
+        }
+        });
+    return num;
+    }
+    </script>
+    <!--2.统计数组arr中值等于n的元素出现的次数-->
+</head>
+<body>
+    
+</body>
+</html>

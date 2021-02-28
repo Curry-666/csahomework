@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>考核</title>
+    <script>
+                window.onload = function () {
+                var a = document.querySelector('#getanswer');
+                a.onclick = function () {
+                var get_content = document.querySelector('#get_number');
+                var out_content = document.querySelector('#out_number');
+                var arr1 = get_content.value;
+                var arr2 = [];
+                for (var i = 0; i < arr1.length; i++) {
+                    if (arr2.indexOf(arr1[i]) == -1) {
+                        arr2.push(arr1[i]);
+                    }
+                }
+                var arr3;
+                for (var i = 0; i < arr2.length; i++) {
+                    for (var j = 0; j < arr2.length; j++) {
+                        if (arr2[j] > arr2[j + 1]) {
+                            arr3 = arr2[j];
+                            arr2[j] = arr2[j + 1];
+                            arr2[j + 1] = arr3;
+                        }
+                    }
+                }
+                out_content.value = arr2;
+            }
+        }
+    </script>
+  
+  </head>
+       
+<body>
+    <p>请输入一组数字：</p>
+    <pre><input type="text" id="get_number"> <input type="submit" value="求解" id="getanswer"> <input type="text" id="out_number"></pre>
+</body>
+</html>
